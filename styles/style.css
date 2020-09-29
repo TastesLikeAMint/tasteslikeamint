@@ -3,22 +3,40 @@
     font-family: 'Source Code Pro', monospace;
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
+    --bg-primary:rgba(255, 255, 255, 0.1);
+    --bg-secondary: rgba(255, 255, 255, 0.3);
 }
 
 body {
-    color: black;
-    background-color: mintcream;
+    /* Fontcolor */
+    color:mintcream;
+    /* Choosing the Wallpaper */
+    background-image: url("/src/wallpaper.jpg");
+    background-repeat: no-repeat;
+    /* stretching image to cover the whole site */
+    background-size: cover;
+    /* sticking the wallpaper, so it doesn't scroll */
+    background-attachment: fixed;
+    /* making sure body is whole site and no unwanted borders */
     margin: 0;
     padding: 0;
 }
 
 main {
-    margin-left: 5rem;
-    padding: 1rem;
+    width: 900px;
+    /* centering element with margin auto. width is needed */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;  
 }
 
+#main-headline {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+/* Scrollbar */
 body::-webkit-scrollbar {
     width: 0.5rem;
 }
@@ -29,70 +47,13 @@ body::-webkit-scrollbar-thumb {
     background: lightsalmon;
 }
 
-.navbar {
-    width: 5rem;
-    height: 100vh;
-    position: fixed;
-    background-color: var(--bg-primary);
-    transition: 200ms ease;
-    
-}
-
-.navbar-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%
-}
-
- .nav-item {
-    width: 100%;
-}  
 
 
-.nav-link{
-    display: flex;
-    align-items: center;
-    height: 5rem;
-    color: var(--text-primary);
-    text-decoration: none;
-    margin-top: 2rem;
-    filter: grayscale(100%) opacity(0.7);
-    transition: var(--transition-speed);
-}
 
-.nav-link:hover{
-    filter: grayscale(0%) opacity(1);
-    background: var(--bg-secondary);
-    color: var(--text-secondary);
-}
-
-.link-text {
-    display: none;
-    margin-left: 1rem;
-}
-
-.nav-link svg {
-    min-width: 2rem;
-    margin: 0 1.5rem;
-}
-
-.navbar:hover{
-    width: 16rem;
-}
-.navbar:hover .link-text {
-    display: block; 
-}
-.svg-inline--fa {
-    color: white;
-}
-
-.svg-inline--fa {
-    transition: var(--transition-speed);
-}
 #masstext {
-    max-width: 600px;
+    /* clockwise -> top right bottom left */
+    padding: 15px 15px 15px 15px;
+    /* rounding the edges of element */
+    border-radius: 20px;
+    background-color: var(--bg-primary);
 }
