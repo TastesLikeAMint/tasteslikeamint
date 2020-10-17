@@ -5,7 +5,11 @@
     --text-secondary: #ececec;
     --bg-primary:rgba(255, 255, 255, 0.1);
     --bg-secondary: rgba(255, 255, 255, 0.3);
+    --angle: 8px;
+    --angle-o: 4px;
+   
 }
+
 
 body {
     /* Fontcolor */
@@ -34,6 +38,11 @@ main {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 200px;
+
+    /* making the headline non selectable */
+    -webkit-user-select: none; /* Chrome + Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
    
 }
 
@@ -53,8 +62,53 @@ body::-webkit-scrollbar-thumb {
     background: mintcream;
 }
 
+#wutbh-button {
+    top: 0;
+    left: 0;
+    transition: all .15s linear 0s;
+    position: relative;
+    display: inline-block;
+    margin-left: 410px;
+    margin-bottom: 50px;
+    background-color: lightcoral;
+    font-size: 1.4em;
+    height: 50px;
+    width: 80px;
+    box-shadow: -6px 6px 0 lightsalmon;
 
+    -webkit-user-select: none; /* Chrome + Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+}
 
+#wutbh-button:hover {
+        top: 3px;
+        left: -3px;
+        box-shadow: -3px 3px 0 white;
+}
+
+#wutbh-button:active {
+    top: 6px;
+    left: -6px;
+    box-shadow: none;
+    
+}
+
+#wutbh-button:focus,
+#wutbh-button:active {
+    outline: 0;
+}
+
+#wutbh {
+    width: 200px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 20px;
+    margin-left: 340px;
+    border-radius: 6px;
+    visibility: hidden;
+    background-color: var(--bg-secondary);
+}
 
 #masstext {
     /* clockwise -> top right bottom left */
