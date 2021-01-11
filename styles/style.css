@@ -15,7 +15,7 @@ body {
     /* Fontcolor */
     color:mintcream;
     /* Choosing the Wallpaper */
-    background-image: url("/src/wallpaper.jpg");
+    background-image: url("/src/wallpaper.jpeg");
     background-repeat: no-repeat;
     /* stretching image to cover the whole site */
     background-size: cover;
